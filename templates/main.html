@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Главная страница{% endblock %}
+{% block header %}<h1>Главная страница</h1>{% endblock %}
+
+{% block content %}
+    {% for item in items %}
+        <div class="card">
+            <h3>{{ loop.index }}. {{ item.name }}</h3>
+            <h4>Цена: {{ item.price }}</h4>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
